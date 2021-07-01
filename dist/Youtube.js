@@ -785,7 +785,7 @@ THE SOFTWARE. */
   Youtube.apiReadyQueue = [];
 
   if (typeof document !== 'undefined'){
-    loadScript('https://www.youtube.com/iframe_api', apiLoaded);
+    loadScript('/_rpc/proxy/youtube_nocookie_api', apiLoaded);
     injectCss();
   }
 

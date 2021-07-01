@@ -1,3 +1,9 @@
+# Note:
+
+This forked copy of this project overrides the default `loadScript` call to the
+cookied YouTube API by simply making a call to a hard-coded RPC endpoint that
+we own.
+
 # YouTube Playback Technology<br />for [Video.js](https://github.com/videojs/video.js)
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/videojs/videojs-youtube.svg)](https://greenkeeper.io/)
