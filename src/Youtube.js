@@ -785,7 +785,12 @@ THE SOFTWARE. */
   Youtube.apiReadyQueue = [];
 
   if (typeof document !== 'undefined'){
-    loadScript('/_rpc/third-party/proxy?url_to_proxy=https://www.youtube.com/iframe_api', apiLoaded);
+    if (window.shouldProxyUrls) {
+      loadScript('/_rpc/third-party/proxy?url_to_proxy=https://www.youtube.com/iframe_api', apiLoaded);
+    } else {
+      loadScript('https://www.youtube.com/iframe_api', apiLoaded);
+    }
+
     injectCss();
   }
 
